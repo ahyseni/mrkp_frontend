@@ -1,0 +1,528 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*-------------------------*\
+        SILK UI CSS
+\*-------------------------*/
+
+
+.ResponsiveOverlay {
+  position: fixed;
+  display: none;
+  width: 250px;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  border-top-left-radius: 10px;
+  font-family: sans-serif;
+  font-size: 14px;
+  z-index: 10001;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.ResponsiveOverlay.show {
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.ResponsiveOverlay_Top {
+  width: 250px;
+  height: 40px;
+  color: #fff;
+  border-top-left-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  background: rgba(51,51,51,1);
+  background: -moz-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(10,10,10,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(10,10,10,1) 100%);
+  background: -o-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(10,10,10,1) 100%);
+  background: -ms-linear-gradient(top, rgba(51,51,51,1) 0%, rgba(10,10,10,1) 100%);
+  background: linear-gradient(to bottom, rgba(51,51,51,1) 0%, rgba(10,10,10,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#0a0a0a', GradientType=0 );
+}
+
+.ResponsiveOverlay_Bottom {
+  width: 250px;
+  color: #fff;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #222;
+}
+
+.ResponsiveOverlay_Bottom .ToggleButton {
+  width: 40px;
+  height: 20px;
+  background-color: #666;
+  border-color: #333;
+  border-radius: 25px;
+}
+
+.ResponsiveOverlay_Bottom .ToggleButton_label:after,
+.ResponsiveOverlay_Bottom .ToggleButton_label.changed:after {
+  border-radius: 20px;
+  height: 10px;
+  top: 3px;
+  width: 10px;
+}
+
+.ResponsiveOverlay_Bottom .ToggleButton_label.changed:after{
+  left: 25px;
+}
+
+.ResponsiveOverlay_Bottom .ToggleButton.changed {
+  border-color: #2B5612;
+  background-color: #6EA01F;
+}
+
+.ResponsiveOverlay_Bottom .ToggleButton_label {
+  width: 40px;
+  height: 20px;
+}
+
+.ResponsiveOverlay_Bottom .ToggleButton_label input {
+  right: 0;
+}
+
+.ResponsiveOverlay_bg {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.ResponsiveOverlay__loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-animation: fa-spin .8s infinite linear;
+  animation: fa-spin .8s infinite linear;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.ResponsiveOverlay_bg.show {
+  opacity: 1;
+  -moz-opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+
+.ResponsiveOverlay_Preview{
+  color: #FFF;
+  padding: 10px 0px;
+}
+
+.ResponsiveOverlay_Preview a{
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.ResponsiveOverlay_Preview a span.fa{
+  color: #fff;
+}
+
+.ResponsiveOverlay_Preview a:hover span.fa{
+  color: #CCC;
+}
+
+.ResponsiveOverlay .OpenClose{
+  cursor: pointer;
+}
+
+.SilkUIDevTools{
+  width: 100%;
+  padding: 20px;
+  background-color: #CCC;
+}
+
+.SilkUIDevTools_log{
+  width: 100%;
+  padding: 20px;
+  background-color: #EFEFEF;
+  margin-bottom: 0px;
+  height: 100px;
+  overflow-y: auto;
+  font-size: 11px;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+
+.SilkUIDevTools textarea{
+  margin-bottom: 10px;
+}
+
+
+/*-------------------------*\
+        END SILK UI CSS
+\*-------------------------*/
+
+
+body {
+  line-height:1.429 !important;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif !important;
+  color:#205527 !important;
+  background-color:#fff !important;
+  font-size:14px !important;
+}
+
+a, a:link, a:visited {
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif !important;
+  color:#205527 !important;
+}
+
+input {
+  height:34px;
+  padding:6px 12px;
+  font-size:14px;
+  border: 1px solid #ccc;
+  border-radius:4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,075);
+  -webkit-transition: border-color ease-in-out .15s;
+  transition: border-color ease-in-out .15s;
+}
+
+input.Button.Search:focus, input.Button.Search:hover {
+  background-color:#ccc !important;
+}
+
+.Feedback_Message_Wrapper {
+  top:-123px !important;
+}
+
+table[cellSpacing] {
+  border-collapse: collapse;
+}
+
+.TableRecords {margin-left:1px;}
+
+.ThemeGrid_Container {
+  margin-left:-15px !important;
+  margin-right:-15px !important;
+}
+
+.TableRecords.OSFillParent {margin-top:130px;}
+
+.TableRecords_Header {padding:10px;}
+
+.tooltipstered {color:grey;}
+
+.lh240 {line-height:240%;}
+
+.red .IconBadge_number {background-color:red !important;}
+
+.Block, .BlockBorder, .BlockNoPad {
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.Block, .BlockBorder {
+  padding:10px;
+}
+
+
+/* ------------------------ *\
+    Main Container
+\* ------------------------ */
+
+.MainCnt {
+  margin-top:145px;
+}
+
+.MainContent, .TitleBarContent {
+  width:1315px;
+  max-width:1315px;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.MainContent {
+  position:relative;
+  padding:0px 24px 20px 25px;
+  overflow-x:auto;
+}
+
+.FullWidth.MainContent {
+  width:100%;
+  margin: 51px 0 0;
+  max-width:none;
+}
+
+
+
+/* ------------------------ *\
+    Selection box and Tiles
+\* ------------------------ */
+
+
+.SelAndTiles {
+  width:1268px;
+  background:#fff;
+  padding-top:15px;
+  position:fixed;
+  z-index:400;
+}
+
+.FullWidth .SelAndTiles {
+  width:98%;
+}
+
+.Tile {border:1px solid #dadbde;text-align:center;}
+
+.Tile.Medium {min-height:55px !important; background-color:#e4e4e4;}
+
+.TileNumber_number, .TileNumber_text {font-size:18px !important;}
+
+.Tile.Medium .TileNumber_number {padding-right: 0px;}
+
+.Tile.TileIcon {border-bottom-width:2px;}
+
+
+/* ------------------------ *\
+    Menu
+\* ------------------------ */
+
+.Menu_TopMenu a:link, .Menu_TopMenu a:visited, .Menu_TopMenu a, .Menu_TopMenuActive a:link {
+  color:#205527 !important;
+  padding:20px 10px 0px 20px !important;
+  line-height:2 !important;
+  font-size:14px !important;
+}
+
+.Menu_TopMenuActive {
+  background-color:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+
+/* ------------------------ *\
+    Title Bar Container
+\* ------------------------ */
+
+.TitleCnt {
+  padding:10px 15px 15px 10px;
+  border-bottom:1px solid #dee5e7;
+  background-color:#FFF;
+  background-position:center center;
+  position:fixed;
+  top:67px;
+  width:100%;
+  z-index:20;
+}
+
+.TitleCnt .Title {
+  float:left;
+  width:30%;
+  line-height:2.4;
+  font-size:18px;
+}
+
+.TitleCnt .Actions {
+  float:left;
+  width:44%;
+  line-height:2.8;
+  text-align:right;
+}
+
+.TitleCnt .Filter {
+  float:right;
+  width:25%;
+  text-align:right;
+}
+
+.TitleBarContent{
+  font-weight:bold;
+  font-size:14px;
+  display:block;
+  box-sizing:border-box;
+  padding-left:25px;
+  padding-right:15px;
+}
+
+.FullWidth .TitleBarContent {
+  margin:0px;
+  width:100%;
+  max-width:none;
+  padding-left:15px;
+}
+
+
+/* ------------------------ *\
+    Filter section
+\* ------------------------ */
+
+.Filters_Wrapper {
+  padding-right: 0px;
+  padding-top:8px;
+}
+.Filters_Wrapper input {
+  box-shadow:none;
+  vertical-align:top;
+  height:36px;
+  width:85%;
+}
+
+
+/* ------------------------ *\
+    Buttons
+\* ------------------------ */
+
+.Button, a.Button {
+  border-bottom-width:1px;
+}
+
+.Button.Search {
+  margin-left:0;
+  border:1px solid #ccc;
+  box-shadow:none;
+  height:34px;
+  min-width:35px;
+  width:35px;
+  padding:17px 20px;
+}
+
+a.ActionAdd,
+a.ActionAdd:link,
+a.ActionAdd:visited,
+a.ActionEdit,
+a.ActionEdit:link,
+a.ActionEdit:visited,
+a.ActionDelete,
+a.ActionDelete:link,
+a.ActionDelete:visited,
+a.ActionChange,
+a.ActionChange:link,
+a.ActionChange:visited {
+  background-color: #fff;
+  box-shadow:none;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-weight:normal;
+  margin-top:8px;
+  height:36px;
+  line-height:35px;
+}
+
+.Button.ButtonDefault, .Button.Is_Default, .greenButton {
+  background-color:#205527;
+  border-color:#205527;
+  color:#fff !important;
+}
+
+.Filters_Wrapper .Button.Is_Default {
+  background-color:#fff;
+  border-color:#ccc;
+}
+
+.Button:hover:active, a.Button:hover:active, .Button, a.Button {
+  color:#205527;
+}
+
+.ButtonGroup_button.active, .ButtonGroup_button.active:hover{
+  background-color: #205527;
+  color:#FFF;
+}
+
+.ButtonGroup_button * {
+  color:inherit;
+}
+
+.Actions .Button {
+  height:36px;
+  margin-top:7px;
+  box-shadow:none;
+  border:1px solid #ccc;
+}
+
+.Button.light, .Button.light:hover:active {
+  background-color:#FFF;
+  color:#00561f !important;
+}
+
+/* ------------------------ *\
+    Wizzard
+\* ------------------------ */
+
+.WizardStep, .WizardStep.ActiveStep {
+  background-color:#FFF;
+  border:none;
+}
+.WizardStep {
+  color:#BBB;
+  background:none;
+}
+.WizardStep.ActiveStep {
+  color:#205527;
+  background-color:#fff;
+}
+
+.WizardStep.Past {
+  background-color:#FFF !important;
+}
+
+.WizardStep:before {
+  background-color:#efefef;
+  border-bottom:20px solid #efefef;
+  border-left:20px solid #efefef;
+  border-top:20px solid #efefef;
+}
+
+.WizardStep.ActiveStep:before, .WizardStep.Past:before {
+  border-bottom-color:transparent;
+  border-top-color:transparent;
+}
+
+.WizardStep > div {
+  border: 1px solid #bbb;
+  border-right:none;
+  min-height:40px;
+}
+
+.WizardStep.ActiveStep > div {
+  border: 1px solid #205527;
+  border-right:none;
+  min-height:40px;
+  margin-right:-21px;
+  position:relative;
+  background-color:#fff;
+}
+
+.WizardStep.ActiveStep:after, .WizardStep.HideArrow:after, .WizardStep:last-of-type:after, .WizardStep.Past:after {
+  height:27px;
+  right:5px;
+  top:7px;
+  width:27px;
+}
+
+.WizardStep.ActiveStep:after, .WizardStep.HideArrow:after, .WizardStep:last-of-type:after {
+  border-right: 1px solid #205527;
+  border-top: 1px solid #205527;
+}
+
+.WizardStep:after, .WizardStep.Past:after, .WizardStep.LastStep:after, WizardStep:after {
+  border-right:1px solid #BBB;
+  border-top:1px solid #BBB;
+}
+
+.WizardStep.Past:after, .WizardStep.ActiveStep:after {
+  background-color:#FFF;
+}
+
+/* ------------------------ *\
+    Tabs
+\* ------------------------ */
+
+.Tabs__tab {padding:10px 20px;font-size:1.2em;border: 1px solid #dadbde;}

@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-service',
+  template: `
+    <p>
+      service works!
+    </p>
+  `,
+  styleUrls: ['./service.component.css']
+})
+export class ServiceComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
