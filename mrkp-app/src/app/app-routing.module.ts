@@ -4,6 +4,8 @@ import {AdministrationComponent} from './modules/administration/administration.c
 import { ReportsComponent} from './modules/reports/reports.component';
 import { ApplicationComponent} from './modules/application/application.component';
 import { AddComponent} from './modules/application/add/add.component';
+import { HeaderComponent} from './core/header/header.component';
+
 
 
 const routes: Routes = [
@@ -20,6 +22,10 @@ const routes: Routes = [
   {
     path: 'app-administration',
     component: AdministrationComponent
+  },
+  {
+    path: 'app-header',
+    component: HeaderComponent
   }
 ];
 

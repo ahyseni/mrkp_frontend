@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Injectable, AfterViewInit, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { GroupService} from './services/group.service';
 import { Observable} from 'rxjs';
 import {Group} from './services/group';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-application',
@@ -13,11 +14,19 @@ export class ApplicationComponent implements OnInit {
   query$!: string;
   Groups$!: Group[];
 
-  showGroup(){
-    this.query$ = 'Test';
+
+  constructor(private data: GroupService, @Inject(DOCUMENT) private document: Document) { }
+
+
+  mrkplace_open() {
+    document.getElementById('mySidebar').style.display = 'block';
+    document.getElementById('myOverlay').style.display = 'block';
   }
 
-  constructor(private data: GroupService) { }
+  mrkplace_close() {
+    document.getElementById("mySidebar").style.display = 'none';
+    document.getElementById("myOverlay").style.display = 'none';
+  }
 
   ngOnInit() {
        this.data.getActiveGroups().subscribe((

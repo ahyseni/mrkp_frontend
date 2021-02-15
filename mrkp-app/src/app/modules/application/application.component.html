@@ -1,19 +1,30 @@
-<div class="position-relative container">
-    <div class="position-absolute container" style="left: 0; z-index:10">
-      <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start"
-              *ngFor="let group of Groups$">
-                <div class="media">
-                  <div class="media-body align-self-center">
-                    <h5 class="m-0">{{ group.nameEN }}</h5>
-                  </div><!-- media body -->
-                </div><!-- media -->
-            </a><!-- link -->
-          </div><!-- list-group -->
-        </div><!-- col -->
-      </div><!-- row -->
-    </div><!-- container -->
-  
-  </div><!-- position -->
+
+<!-- Sidebar/menu -->
+<nav class="mrkplace-sidebar mrkplace-bar-block mrkplace-white mrkplace-collapse mrkplace-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="mrkplace-container mrkplace-display-container mrkplace-padding-16">
+    <i (click)="mrkplace_close()" class="fa fa-remove mrkplace-hide-large mrkplace-button mrkplace-display-topright"></i>
+    <h3 class="mrkplace-wide"><b>mrkplace</b></h3>
+  </div>
+  <div class="mrkplace-padding-64 mrkplace-large mrkplace-text-grey" style="font-weight:bold">
+      <a href="#" class="mrkplace-bar-item mrkplace-button"
+        *ngFor="let group of Groups$">
+          <div class="media">
+            <div class="media-body align-self-center">
+              <h5 class="m-0">{{ group.nameEN }}</h5>
+            </div><!-- media body -->
+          </div><!-- media -->
+      </a><!-- link -->
+  </div>
+  <a href="#footer" class="mrkplace-bar-item mrkplace-button mrkplace-padding">Contact</a> 
+  <a href="javascript:void(0)" class="mrkplace-bar-item mrkplace-button mrkplace-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  <a href="#footer"  class="mrkplace-bar-item mrkplace-button mrkplace-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="mrkplace-bar mrkplace-top mrkplace-hide-large mrkplace-black mrkplace-xlarge">
+  <div class="mrkplace-bar-item mrkplace-padding-24 mrkplace-wide">LOGO</div>
+  <a href="javascript:void(0)" class="mrkplace-bar-item mrkplace-button mrkplace-padding-24 mrkplace-right" (click)="mrkplace_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="mrkplace-overlay mrkplace-hide-large" (click)="mrkplace_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
